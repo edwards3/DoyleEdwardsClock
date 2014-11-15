@@ -2,6 +2,7 @@ package cmsc434.doyleedwardsclock;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
@@ -42,6 +43,9 @@ public class MainActivity extends Activity {
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
+        } else if (id == R.id.custom_clock) {
+            Intent intent = new Intent(this, ClockActivity.class);
+            startActivity(intent);
         }
 
         return super.onOptionsItemSelected(item);
